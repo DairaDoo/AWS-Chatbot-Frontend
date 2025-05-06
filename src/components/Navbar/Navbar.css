@@ -1,0 +1,34 @@
+.navbar {
+    background-color: #7AC6D2; /* Verde azulado oscuro para el fondo */
+    color: #E9F5BE; /* Verde claro para el texto */
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    /* Vamos a reducir el ancho máximo si es necesario, o ajustar el espaciado */
+    /* Por ahora, dejaremos que ocupe todo el ancho, pero podemos agregar un max-width si lo deseas */
+    /* max-width: 1200px;
+    margin: 0 auto; /* Para centrar si se aplica un max-width */
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    padding-bottom: 0;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-placeholder {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-placeholder img {
+    height: 4rem; /* Aumentamos la altura del logo */
+    /* width: auto; /* Mantiene la proporción */
+  }
+  
+  .app-name {
+    font-size: 1.8rem; /* Aumentamos el tamaño del texto del nombre */
+    font-weight: bold;
+  }
+  
+  /* Puedes agregar más estilos para otros elementos del navbar aquí */
