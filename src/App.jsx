@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
+import ChatPage from './pages/ChatPage';
 
 function App() {
 
@@ -9,8 +10,8 @@ function App() {
       <div className="App">
         <Navbar />
         <header className="App-header">
-          <p>Bienvenido a AWS Services Chatbot</p>
         </header>
+        <ChatPage />
       </div>
     </>
   );
