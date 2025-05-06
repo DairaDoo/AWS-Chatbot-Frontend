@@ -1,8 +1,8 @@
 .chat-container {
     display: flex;
     flex-direction: column;
-    height: 80vh; /* Ajusta la altura según tus necesidades */
-    max-width: 900px;
+    height: 80vh;
+    max-width: 1000px;
     margin: 2rem auto;
     padding: 1.5rem;
     background-color: #f8f9fa;
@@ -18,25 +18,58 @@
     flex-direction: column;
   }
   
-  .user-message {
-    background-color: #e0f2f7; /* Azul muy claro */
-    color: #333;
+  .user-message,
+  .chatbot-message {
     padding: 0.8rem;
     border-radius: 6px;
     margin-bottom: 0.5rem;
-    align-self: flex-end; /* Alinea a la derecha */
     max-width: 80%;
+    display: flex; /* Para alinear el icono y el texto */
+    align-items: flex-start; /* Alinea el icono y el texto desde la parte superior */
+    word-break: break-word;
+  }
+  
+  .user-message {
+    background-color: #e0f2f7;
+    color: #333;
+    align-self: flex-end;
+    flex-direction: row-reverse; /* Pone el icono a la derecha para el usuario */
   }
   
   .chatbot-message {
     background-color: #fff;
     color: #333;
-    padding: 0.8rem;
-    border-radius: 6px;
-    margin-bottom: 0.5rem;
-    align-self: flex-start; /* Alinea a la izquierda */
-    max-width: 80%;
-    border: 1px solid #ddd; /* Un borde sutil para distinguirlo */
+    align-self: flex-start;
+    border: 1px solid #ddd;
+    flex-direction: row; /* Asegura que el icono esté a la izquierda para el chatbot */
+  }
+  
+  .message-icon-container {
+    margin-right: 0.5rem; /* Espacio a la derecha del icono (para el chatbot) */
+    display: flex;
+    align-items: center; /* Centra el icono verticalmente */
+  }
+  
+  .user-message .message-icon-container {
+    margin-left: 0.5rem; /* Espacio a la izquierda del icono (para el usuario) */
+    margin-right: 0;
+  }
+  
+  .message-icon {
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
+  .thinking-icon {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    animation: spin 1s linear infinite;
+    color: #777;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
   
   .input-area {
@@ -53,7 +86,7 @@
   }
   
   .send-button {
-    background-color: #3498db; /* Azul brillante */
+    background-color: #3498db;
     color: white;
     padding: 0.8rem 1.2rem;
     border: none;
@@ -76,4 +109,12 @@
     text-align: center;
     margin-top: 1rem;
     color: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loading-spinner {
+    margin-right: 0.5rem;
+    animation: spin 1s linear infinite;
   }
